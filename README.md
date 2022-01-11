@@ -72,13 +72,13 @@ MAIN:<br />
  > 0x11df: ret
 </pre>
 
-###[VERSION TRACKER]<br />
+### [VERSION TRACKER]<br />
 <pre>
  (1.1.0):<br />
    - Support for Disassembling x86, IA-64 and AMD x86-64 ELF binaries
 </pre>
 
-###[BUG TRACKER]<br />
+### [BUG TRACKER]<br />
 <pre>
  (1.1.0):<br />
    - (Not really a bug, just logic error) In analyze(std::string fileName) on eEntry set we get our bytes from [FILE] but it is displayed as Big Endian
