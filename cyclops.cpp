@@ -350,10 +350,10 @@ bool cycDisasm::disassembleELF(std::string fileName, uint16_t arch, char* &data,
 		// Display Disassebled instructions
 		std::cout << "MAIN:" << std::endl;
     
-    // This is a mess..lol
+    		// This is a mess..lol
 		for(instIndx = 0; instIndx < instrCnt; instIndx++){
 			
-      // This is here due to endbr64 being at the start of the main function, so we start checking after first index
+      			// This is here due to endbr64 being at the start of the main function, so we start checking after first index
 			if((instIndx > 0) && (strcmp(insn[instIndx].mnemonic, "endbr64") == 0)){
 				instIndx = instrCnt;
 			}
@@ -370,14 +370,13 @@ bool cycDisasm::disassembleELF(std::string fileName, uint16_t arch, char* &data,
 
 	// Failed to disassemble instructions
 	else{
-    cs_close(&capstoneHandle);
-    delete[] byteCodeData;
+    		cs_close(&capstoneHandle);
+    		delete[] byteCodeData;
 		return false;
 	}
 
 	// Clean up after disassembly has taken place
 	cs_close(&capstoneHandle);
 	delete[] byteCodeData;
- 
 	return true;
 }
