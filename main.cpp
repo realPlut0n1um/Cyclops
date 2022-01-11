@@ -29,7 +29,7 @@ int main(int argc, const char* argv[]){
 		// Help information (Possible error in [INIT_ARG])
 		case 2:
 			// iOS 0day, thank you NSA <3
-			if(static_cast<std::string>(argv[1]) == "-hackthensa"){
+			if(static_cast<std::string>(argv[1]) == "-0day"){
 				cyc.nsa0day();
 				return 0;
 			}
