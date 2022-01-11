@@ -26,7 +26,7 @@ int main(int argc, const char* argv[]){
 			cyc.help();
 			break;		
 
-		// Help information (Possible error in [INIT_ARG]
+		// Help information (Possible error in [INIT_ARG])
 		case 2:
 			// User wants to hack the NSA
 			if(static_cast<std::string>(argv[1]) == "-hackthensa"){
