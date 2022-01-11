@@ -1,3 +1,8 @@
+/* 
+ * Cyclops Disassembler
+ * Author: https://twitter.com/Plut0n1um1
+ */
+
 // Standard Headers
 #include <vector>
 #include <cstring>
