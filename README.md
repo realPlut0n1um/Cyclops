@@ -3,7 +3,7 @@ Disassembler project utilizing Capstone.<br />
 
 ### [SUPPORTED FILE FORMATS]<br />
 <pre>
-  - ELF <br />
+  - ELF (Working)<br />
   - PE (In Development)<br />
 </pre>
 
