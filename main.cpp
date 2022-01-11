@@ -15,7 +15,7 @@ int main(int argc, const char* argv[]){
 	cyclops cyc; // Create our cyclops object for access to coreutils
 	cycDisasm cyc_dis; // Create our Cyclops Disassembler for access to disassembler utils
 
-	cyc.banner(0, 1, 0); // Display our banner
+	cyc.banner(1, 1, 0); // Display our banner
 
 	// Check how many arguments were passed
 	switch(argc){
