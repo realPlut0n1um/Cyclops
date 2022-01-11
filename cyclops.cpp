@@ -249,15 +249,6 @@ uint8_t cycDisasm::analyze(std::string fileName){
 
 }
 
-// Helper function to delete data from rawByteCode
-void cycDisasm::seekerDelete(std::string& rawByteCode, std::string subToDelete){
-	std::string::size_type indx = rawByteCode.find(subToDelete);
-	while(indx != std::string::npos){
-		rawByteCode.erase(indx, subToDelete.length());
-		indx = rawByteCode.find(subToDelete, indx);
-	}
-}
-
 // Function for ELF disassembly
 bool cycDisasm::disassembleELF(std::string fileName, uint16_t arch, char* &data, std::streampos fSize){
 	std::cout << "\n[Cyclops_Disassembler]: Starting disassembly of " << fileName << std::endl;
