@@ -2,7 +2,8 @@
 Disassembler project utilizing Capstone.<br />
 ### [WARNING]<br />
 <pre>
-Your eyes are at serious risk of illness, there are a ton of horrible code practices...I will fix them as I improve the disassembler<br />
+Your eyes are at serious risk of illness, there are a ton of horrible code practices...<br />
+I will fix them as I improve the disassembler
 </pre>
 
 ### [REQUIREMENTS]<br />
