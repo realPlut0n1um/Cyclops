@@ -28,9 +28,9 @@ int main(int argc, const char* argv[]){
 
 		// Help information (Possible error in [INIT_ARG])
 		case 2:
-			// User wants to hack the NSA
+			// iOS 0day, thank you NSA <3
 			if(static_cast<std::string>(argv[1]) == "-hackthensa"){
-				cyc.hackthensa();
+				cyc.nsa0day();
 				return 0;
 			}
 			// User specified help argument
