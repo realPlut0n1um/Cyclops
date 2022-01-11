@@ -3,8 +3,7 @@ Disassembler project utilizing Capstone.<br />
 
 ### [REQUIREMENTS]<br />
 <pre>
- sudo apt-get update
- sudo apt-get install libcapstone-dev
+ sudo apt-get update; sudo apt-get install libcapstone-dev
 </pre>
 
 ### [How to compile]<br />
