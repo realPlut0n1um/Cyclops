@@ -13,7 +13,7 @@ I will fix them as I improve the disassembler
 
 ### [COMPILING]<br />
 <pre>
- Run make in root directory of Cyclops..but make sure you have libcapstone-dev installed, see [REQUIREMENTS]
+ $ make
 </pre>
  
 
