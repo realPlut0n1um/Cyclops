@@ -58,6 +58,7 @@ void cyclops::error(uint8_t errorCode){
 		case 0x04:
 			std::cout << "[Cyclops_Error]: Unable to open [FILE]!" << std::endl;
 			break;
+		// Unable to analyze unknown format
 		case 0x05:
 			std::cout << "[Cyclops_Error]: Unable to analyze unknown file format!" << std::endl;
 			break;
