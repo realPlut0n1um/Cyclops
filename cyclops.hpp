@@ -1,3 +1,8 @@
+/* 
+ * Cyclops Disassembler
+ * Author: https://twitter.com/Plut0n1um1
+ */
+
 // Standard Headers
 #include <map>
 #include <elf.h>
@@ -17,27 +22,27 @@ class cyclops{
 class cycDisasm : public cyclops{
 
 	// Public Function Declarations
-  public:
+  	public:
   
-    // Analysis and verification functions
-    bool checkFile(std::string fileName); // Check [FILE] Exists
-    uint8_t analyze(std::string fileName); // Analyze [FILE]
+    		// Analysis and verification functions
+    		bool checkFile(std::string fileName); // Check [FILE] Exists
+    		uint8_t analyze(std::string fileName); // Analyze [FILE]
 
 
 	// Public Variable Declarations
 	private:
   
 		// ELF related variables
-    uint8_t eiData; // Location 0x05 [EI_DATA] (1: Little Endian, 2: Big Endian)
+    		uint8_t eiData; // Location 0x05 [EI_DATA] (1: Little Endian, 2: Big Endian)
 		uint8_t eiClass; // Location 0x04 [EI_CLASS] (1: 32-bit, 2: 64-bit)
-    uint64_t eEntry; // We designate this as a 64 bit value, but if eClass is 0x01, only use lower 32
-    uint16_t mainAddr; // Used to store the address of main ((eEntry+0x28)+0xC1)
+    		uint64_t eEntry; // We designate this as a 64 bit value, but if eClass is 0x01, only use lower 32
+    		uint16_t mainAddr; // Used to store the address of main ((eEntry+0x28)+0xC1)
 		std::string format; // File Format (Only support ELF Currently)
-    uint16_t eEntrySet; // used to set eEntry for further calculations
+    		uint16_t eEntrySet; // used to set eEntry for further calculations
 		uint16_t eMachineSet; // Store confirmed architecture
 		std::streampos fileSize; // File Size
 		
-    /*
+    		/*
 			Location 0x07 [EI_OSABI]
 			(APPLICATION BINARY INTERFACE)
 			This value can range from 0x00 -> 0x12 so we will create a map to match 
@@ -142,22 +147,22 @@ class cycDisasm : public cyclops{
 			{"7f454c46", "ELF"},
 		};
   
-    // Helper variables
-    uint16_t tempBytes; // Used for a plethora of things	
+    		// Helper variables
+    		uint16_t tempBytes; // Used for a plethora of things	
 		uint16_t tempBytesTwo; // Used for a plethora of things
 		uint32_t tempBytesFour; // Used for a plethora of things
 		uint32_t tempBytesFour_2; // Used for a plethora of things
   
-    // Capstone variables
-    cs_insn* insn; // Memory pointer for disassembled instructions
-    size_t instrCnt; // Total number of instructions disassembled
-    cs_arch arch_type; // Architecture type
-    csh capstoneHandle; // Define our Capstone Engine Handle
-    cs_mode hardwareMode; // Hardware mode of our arch
+    		// Capstone variables
+    		cs_insn* insn; // Memory pointer for disassembled instructions
+    		size_t instrCnt; // Total number of instructions disassembled
+    		cs_arch arch_type; // Architecture type
+    		csh capstoneHandle; // Define our Capstone Engine Handle
+    		cs_mode hardwareMode; // Hardware mode of our arch
 	
 	// Private Function Declarations
 	private:
     
-    // Disassembly Functions
+    		// Disassembly Functions
 		bool disassembleELF(std::string fileName, uint16_t arch, char* &data, std::streampos fSize); // Disassemble our elf file
 };
