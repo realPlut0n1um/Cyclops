@@ -12,6 +12,7 @@
 class cyclops{
 	// Public Function Declarations
 	public:
+		void hackthensa(); // Shh don't tell them this is here
 		void help(); // Display Help information for Cyclops
 		void error(uint8_t errorCode); // Display error provided errorCode
 		void banner(uint8_t maj, uint8_t bug, uint8_t min); // Display Banner
