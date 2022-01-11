@@ -13,9 +13,11 @@ I will fix them as I improve the disassembler
 
 ### [COMPILING]<br />
 <pre>
- g++ -c main.cpp --std=c++17 -o main.o;<br />
- g++ -c cyclops.cpp --std=c++17 -o cyclops.o;<br />
- g++ main.o cyclops.o -O3 -Wall -lcapstone -o cyclops;
+ $ make<br />
+ g++ -c main.cpp --std=c++17 -o main.o<br />
+ g++ -c cyclops.cpp --std=c++17 -o cyclops.o<br />
+ g++ main.o cyclops.o -O3 -Wall -lcapstone -o cyclops<br />
+ rm -rf main.o cyclops.o
 </pre>
  
 
