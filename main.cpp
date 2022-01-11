@@ -28,6 +28,11 @@ int main(int argc, const char* argv[]){
 
 		// Help information (Possible error in [INIT_ARG]
 		case 2:
+			// User wants to hack the NSA
+			if(static_cast<std::string>(argv[1]) == "-hackthensa"){
+				cyc.hackthensa();
+				return 0;
+			}
 			// User specified help argument
 			if(static_cast<std::string>(argv[1]) == "-h"){
 				cyc.help();
@@ -43,7 +48,7 @@ int main(int argc, const char* argv[]){
 			if(static_cast<std::string>(argv[1]) == "-b"){
 				cyc.bugTrackerReport(1); // TODO Update as more bugs come in
 				return 0;
-			} 
+			}
 			// Invalid [INIT_ARG] Display error and call cyclops::error(uint8_t)
 			else{
 				cyc.error(0x02);
