@@ -13,7 +13,7 @@ I will fix them as I improve the disassembler
 
 ### [COMPILING]<br />
 <pre>
- $ make
+ Run make
 </pre>
  
 
