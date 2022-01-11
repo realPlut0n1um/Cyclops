@@ -22,7 +22,7 @@ Disassembler project utilizing Capstone.<br />
 
 ### [SUPPORTED ARCHITECTURES]<br />
 <pre>
-  - X86 (Working)<br />
+  - x86 (Working)<br />
   - IA-64 (Working)<br />
   - AMD x86-64 (Working)<br />
   - ARMv7 (In Development)<br />
@@ -71,3 +71,12 @@ MAIN:<br />
  > 0x11de: pop rbp<br />
  > 0x11df: ret<br />
 </pre>
+
+###[VERSION TRACKER]<br />
+ (1.1.0):<br />
+   - Support for Disassembling x86, IA-64 and AMD x86-64 ELF binaries<br />
+
+
+###[BUG TRACKER]<br />
+ (1.1.0):<br />
+   - (Not really a bug, just logic error) In analyze(std::string fileName) on eEntry set we get our bytes from [FILE] but it is displayed as Big Endian<br />
