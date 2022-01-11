@@ -1,6 +1,14 @@
 # Cyclops
 Disassembler project utilizing Capstone.<br />
 
+### [How to compile]<br />
+<pre>
+ g++ -c main.cpp --std=c++17 -o main.o;<br />
+ g++ -c cyclops.cpp --std=c++17 -o cyclops.o;<br />
+ g++ main.o cyclops.o -O3 -Wall -lcapstone -o cyclops;<br />
+</pre>
+ 
+
 ### [SUPPORTED FILE FORMATS]<br />
 <pre>
   - ELF (Working)<br />
