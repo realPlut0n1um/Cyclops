@@ -1,6 +1,12 @@
 # Cyclops
 Disassembler project utilizing Capstone.<br />
 
+### [REQUIREMENTS]<br />
+<pre>
+ sudo apt-get update
+ sudo apt-get install libcapstone-dev
+</pre>
+
 ### [How to compile]<br />
 <pre>
  g++ -c main.cpp --std=c++17 -o main.o;<br />
