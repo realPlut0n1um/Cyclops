@@ -10,14 +10,14 @@ Disassembler project utilizing Capstone.<br />
 <pre>
  g++ -c main.cpp --std=c++17 -o main.o;<br />
  g++ -c cyclops.cpp --std=c++17 -o cyclops.o;<br />
- g++ main.o cyclops.o -O3 -Wall -lcapstone -o cyclops;<br />
+ g++ main.o cyclops.o -O3 -Wall -lcapstone -o cyclops;
 </pre>
  
 
 ### [SUPPORTED FILE FORMATS]<br />
 <pre>
   - ELF (Working)<br />
-  - PE (In Development)<br />
+  - PE (In Development)
 </pre>
 
 ### [SUPPORTED ARCHITECTURES]<br />
@@ -30,7 +30,7 @@ Disassembler project utilizing Capstone.<br />
   - SPARC (In Development)<br />
   - PowerPC (In Development)<br />
   - Berkley Packet Filter (In Development)<br />
-  - TMS320C6000 Digital Signal Processor family (In Development)<br />
+  - TMS320C6000 Digital Signal Processor family (In Development)
 </pre>
 
 ### [EXAMPLE DISASSEMBLY]<br />
@@ -69,14 +69,17 @@ MAIN:<br />
  > 0x11d4: call 0x10a0<br />
  > 0x11d9: mov eax, 0<br />
  > 0x11de: pop rbp<br />
- > 0x11df: ret<br />
+ > 0x11df: ret
 </pre>
 
 ###[VERSION TRACKER]<br />
+<pre>
  (1.1.0):<br />
-   - Support for Disassembling x86, IA-64 and AMD x86-64 ELF binaries<br />
-
+   - Support for Disassembling x86, IA-64 and AMD x86-64 ELF binaries
+</pre>
 
 ###[BUG TRACKER]<br />
+<pre>
  (1.1.0):<br />
-   - (Not really a bug, just logic error) In analyze(std::string fileName) on eEntry set we get our bytes from [FILE] but it is displayed as Big Endian<br />
+   - (Not really a bug, just logic error) In analyze(std::string fileName) on eEntry set we get our bytes from [FILE] but it is displayed as Big Endian
+</pre>
