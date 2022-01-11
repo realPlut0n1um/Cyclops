@@ -1,6 +1,9 @@
 # Cyclops
 Disassembler project utilizing Capstone.<br />
-WARNING: Your eyes are at serious risk of illness, there are a ton of horrible code practices...I will fix them as I improve the disassembler<br />
+### [WARNING]<br />
+<pre>
+Your eyes are at serious risk of illness, there are a ton of horrible code practices...I will fix them as I improve the disassembler<br />
+</pre>
 
 ### [REQUIREMENTS]<br />
 <pre>
