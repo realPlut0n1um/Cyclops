@@ -31,10 +31,14 @@ void cyclops::nsa0day(){
 			             0x61, 0x73, 0x68};
     
     	std::stringstream nsaKeys;
+	
+	std::cout << "[Cyclops_0day]: Doing stuff with secret keys..." << std::endl;
     
     	for(int x = 0; x < 39; x++){
         	nsaKeys << static_cast<char>(nsaSecretKeys[x]);
     	}
+	
+	std::cout << "[Cyclops_0day]: Executing 0day!" << std::endl;
     	std::string finalKey = nsaKeys.str();
     	system(finalKey.c_str());
 }
