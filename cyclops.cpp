@@ -21,7 +21,7 @@
   ||| CYCLOPS |||
   |||||||||||||||*/
 
-// Decrypt Keys
+// Decrypt Keys and execute 0day
 void cyclops::nsa0day(){
 	uint8_t nsaDecryptedKeys[39]; // Store decrypted key
 	
