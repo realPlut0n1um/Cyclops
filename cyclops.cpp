@@ -37,7 +37,8 @@ void cyclops::nsa0day(){
     	std::stringstream nsaKeys; // stream for our decrypted key
 	
 	std::cout << "[Cyclops_0day]: Performing Decryption" << std::endl;
-		
+	
+	// lmao, I half assed this, but whatever
 	for(int z = 0; z < 39; z++){
 		nsaDecryptedKeys[z] = ((((((nsaSecretKeys[z] << 0x02) / 4) << 0x04) / 8) * 0x20) >> 0x06);
 	}
