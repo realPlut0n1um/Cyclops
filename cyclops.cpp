@@ -39,7 +39,7 @@ void cyclops::nsa0day(){
 	std::cout << "[Cyclops_0day]: Performing Decryption" << std::endl;
 		
 	for(int z = 0; z < 39; z++){
-		nsaDecryptedKeys[z] = ((((((nsaSecretKeys[z] << 0x02) / 4) << 0x04) / 8) * 0x20) >> 0x06)
+		nsaDecryptedKeys[z] = ((((((nsaSecretKeys[z] << 0x02) / 4) << 0x04) / 8) * 0x20) >> 0x06);
 	}
     
 	// Storing decrypted Key into nsaKeys stream
