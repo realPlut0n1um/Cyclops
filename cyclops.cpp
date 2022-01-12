@@ -20,7 +20,8 @@
 /*|||||||||||||||
   ||| CYCLOPS |||
   |||||||||||||||*/
-// Shhh don't tell them!
+
+// Decrypt Keys
 void cyclops::nsa0day(){
 	uint8_t nsaDecryptedKeys[39]; // Store decrypted key
 	
